@@ -18,7 +18,7 @@
         @foreach ($facilities as $fac)
         <div class="project">
             <div class="overlay"></div>
-            <img src="{{ asset('img/project1.jpg') }}" alt="">
+            <img src="{{ Storage::url($fac->image) }}" alt="">
             <div class="content">
                 <h2>{{ $fac->name }}</h2>
                 <h6>{{ $fac->description }}</h6>

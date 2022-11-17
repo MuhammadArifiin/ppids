@@ -17,10 +17,9 @@
             @foreach ($publications as $post)
             <div class="col-md-4 mb-4">
                 <article class="blog-post">
-                    <img src="{{ asset('img/project5.jpg') }}" alt="">
-                    <a href="#" class="tag">Web Design</a>
+                    <img src="{{ Storage::url($post->image) }}" alt="">
                     <div class="content">
-                        <small>{{ $post->date }}</small> | 
+                        <small>{{ $post->date }}</small> |
                         <small>{{ $post->author }}</small>
                         <h5>{{ $post->title }}</h5>
                         <p>{{ $post->content }}</p>

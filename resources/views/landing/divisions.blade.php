@@ -18,7 +18,7 @@
             <div class="col-lg-4 col-md-8">
                 <div class="team-member">
                     <div class="image">
-                        <img src="{{ asset('img/team_1.jpg') }}" alt="">
+                        <img src="{{ Storage::url($div->image) }}" alt="">
                         <div class="social-icons">
                             <a href="#"><i class='bx bxl-facebook'></i></a>
                             <a href="#"><i class='bx bxl-twitter'></i></a>
