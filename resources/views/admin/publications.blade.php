@@ -34,7 +34,7 @@
                                 <tr>
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Date</th>
-                                    <th class="border-top-0">Author</th>
+                                    <th class="border-top-0">Image</th>
                                     <th class="border-top-0">Title</th>
                                     <th class="border-top-0">Content</th>
                                     <th class="border-top-0">Action</th>
@@ -47,6 +47,7 @@
                                     <td>{{ $i++ }}</td>
                                     <td class="txt-oflo">{{ $pub->date }}</td>
                                     <td>{{ $pub->author }}</td>
+                                    <td><img style="height: 50px" src="{{ Storage::url($pub->image) }}" alt=""></td>
                                     <td class="txt-oflo">{{ $pub->title }}</td>
                                     <td>{{ $pub->content }}</td>
                                     <td>

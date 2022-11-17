@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                    <form action="{{ url('/admin-publications/update',$publications->id) }}" method="POST">
+                    <form action="{{ url('/admin-publications/update',$publications->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="date" class="form-label">Date</label>
@@ -28,10 +28,10 @@
                                 value="{{ $publications->date }}">
                         </div>
                         <div class="mb-3">
-                            <label for="author" class="form-label">Author</label>
-                            <input type="text" class="form-control" id="author" name="author"
-                                value="{{ $publications->author }}">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="image" name="image">
                         </div>
+                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($publications->image) }}" alt=""></td>
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" name="title"
@@ -42,10 +42,7 @@
                             <input type="text" class="form-control" id="content" name="content"
                                 value="{{ $publications->content }}">
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="image">
-                        </div> --}}
+                     
                         <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
                 </div>

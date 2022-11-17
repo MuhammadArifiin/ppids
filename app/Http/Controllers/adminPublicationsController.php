@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Publications;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 use RealRashid\SweetAlert\Facades\Alert;
 
 class adminPublicationsController extends Controller
@@ -24,16 +26,17 @@ class adminPublicationsController extends Controller
     {
         $request->validate([
             'date' => 'required',
-            'author' => 'required',
             'title' => 'required',
-            'content' => 'required'
+            'content' => 'required',
+            'image' => 'required|max:1500|mimes:png,jpg',
         ]);
 
         $data = new Publications();
         $data->date = $request->input('date');
-        $data->author = $request->input('author');
+        $data->author = Auth::user()->name;
         $data->title = $request->input('title');
         $data->content = $request->input('content');
+        $data->image = $request->file('image')->store('asset/publication', 'public');
         $data->save();
 
         Alert::success('success', 'Tambah data berhasil');
@@ -50,11 +53,19 @@ class adminPublicationsController extends Controller
     {
         $publications = Publications::find($id);
 
+       
+
+        if($request->file('image')){
+            Storage::disk('local')->delete('public/'. $publications->image);
+            $publications->image = $request->file('image')->store('asset/publication', 'public');
+            
+        }
+      
         $publications->date = $request->date;
-        $publications->author = $request->author;
+        $publications->author = Auth::user()->name;
         $publications->title = $request->title;
         $publications->content = $request->content;
-        $publications->save();
+        $publications->update();
 
         Alert::success('success', 'Edit data berhasil');
         return redirect()->to('/admin-publications');
@@ -64,6 +75,7 @@ class adminPublicationsController extends Controller
     public function delete($id)
     {
         $data = Publications::find($id);
+        Storage::disk('local')->delete('public/'. $data->image);
         $data->delete();
 
         Alert::success('success', 'Hapus data berhasil');

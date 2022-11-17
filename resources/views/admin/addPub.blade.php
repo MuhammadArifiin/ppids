@@ -20,16 +20,17 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                    <form action="{{ url('/admin-publications') }}" method="POST">
+                    <form action="{{ url('/admin-publications') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="date" class="form-label">Date</label>
                             <input type="date" class="form-control" id="date" name="date">
                         </div>
                         <div class="mb-3">
-                            <label for="author" class="form-label">Author</label>
-                            <input type="text" class="form-control" id="author" name="author">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="image" name="image">
                         </div>
+                        
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" name="title">
@@ -38,10 +39,7 @@
                             <label for="content" class="form-label">Content</label>
                             <input type="text" class="form-control" id="content" name="content">
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="image">
-                        </div> --}}
+                       
                         <button type="submit" class="btn btn-info text-white">Submit</button>
                     </form>
                 </div>
