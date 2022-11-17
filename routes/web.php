@@ -35,6 +35,7 @@ Route::get('/user/publications', [publicationsController::class, 'index']);
 Route::get('/user/contact', [contactsController::class, 'index']);
 
 
+Route::middleware('auth')->group(function(){
 Route::get('/admin-dashboard', [adminController::class, 'dashboard']);
 Route::get('/admin-profile', [adminProfileController::class, 'index']);
 
@@ -58,5 +59,7 @@ Route::post('/admin-publications', [adminPublicationsController::class, 'store']
 Route::get('/admin-publications/edit/{id}', [adminPublicationsController::class, 'edit']);
 Route::post('/admin-publications/update/{id}', [adminPublicationsController::class, 'update'])->name('update');
 Route::get("/admin-publications/{id}", [adminPublicationsController::class, 'delete']);
+});
 
-Route::get('/admin-login', [loginController::class, 'index']);
+Route::get('/admin-login', [loginController::class, 'index'])->name('admin-login');
+Route::get('/admin-check-login', [loginController::class, 'checkLogin']);
