@@ -30,6 +30,7 @@
                                 <tr>
                                     <th class="border-top-0">#</th>
                                     <th class="border-top-0">Name</th>
+                                    <th class="border-top-0">Image</th>
                                     <th class="border-top-0">Description</th>
                                     <th class="border-top-0">Action</th>
                                 </tr>
@@ -40,6 +41,7 @@
                                 <tr>
                                     <td>{{ $i++ }}</td>
                                     <td class="txt-oflo">{{ $fac->name }}</td>
+                                    <td><img style="height: 50px" src="{{ Storage::url($fac->image) }}" alt=""></td>
                                     <td>{{ $fac->description }}</td>
                                     <td>
                                         <a class="btn btn-warning text-white me-1"

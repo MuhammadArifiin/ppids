@@ -16,6 +16,15 @@
             </div>
         </div>
     </div>
+    @if ($errors->any())
+    <div class="alert alert-danger mt-2 mb-2">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
@@ -33,13 +42,10 @@
                             <input type="text" class="form-control" id="employee" name="employee"
                                 value="{{ $divisions->employee }}">
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="image">
-                        </div> --}}
+                     
                         <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
-                    {{-- @endforeach --}}
+                  
                 </div>
             </div>
         </div>

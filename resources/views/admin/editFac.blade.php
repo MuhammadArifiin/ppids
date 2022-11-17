@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                    <form action="{{ url('/admin-facilities/update',$facilities->id) }}" method="POST">
+                    <form action="{{ url('/admin-facilities/update',$facilities->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Name</label>
@@ -29,14 +29,16 @@
                                 value="{{ $facilities->name }}">
                         </div>
                         <div class="mb-3">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="image" name="image">
+                        </div>
+                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($facilities->image) }}" alt=""></td>
+                        <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
                             <input type="text" class="form-control" id="description" name="description"
                                 value="{{ $facilities->description }}">
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="image">
-                        </div> --}}
+                    
                         <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
                 </div>
