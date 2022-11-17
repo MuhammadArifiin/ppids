@@ -29,14 +29,19 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                    {{-- @foreach ($divisions as $div) --}}
-                    <form action="{{ url('/admin-divisions/update',$divisions->id) }}" method="POST">
+                   
+                    <form action="{{ url('/admin-divisions/update',$divisions->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="division" class="form-label">Division</label>
                             <input type="text" class="form-control" id="division" name="division"
                                 value="{{ $divisions->division }}">
                         </div>
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="file" class="form-control" id="image" name="image">
+                        </div>
+                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($divisions->image) }}" alt=""></td>
                         <div class="mb-3">
                             <label for="employee" class="form-label">Employee</label>
                             <input type="text" class="form-control" id="employee" name="employee"

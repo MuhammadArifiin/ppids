@@ -28,6 +28,7 @@
                             <tr>
                                 <th class="border-top-0">#</th>
                                 <th class="border-top-0">Division</th>
+                                <th class="border-top-0">Image</th>
                                 <th class="border-top-0">Employee</th>
                                 <th class="border-top-0">Action</th>
                             </tr>
@@ -38,6 +39,7 @@
                             <tr>
                                 <td>{{ $i++ }}</td>
                                 <td class="txt-oflo">{{ $div->division }}</td>
+                                <td><img style="height: 50px" src="{{ Storage::url($div->image) }}" alt=""></td>
                                 <td>{{ $div->employee }}</td>
                                 <td>
                                     <a class="btn btn-warning text-white me-1"
