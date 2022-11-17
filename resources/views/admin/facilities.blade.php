@@ -42,7 +42,7 @@
                                     <td>{{ $i++ }}</td>
                                     <td class="txt-oflo">{{ $fac->name }}</td>
                                     <td><img style="height: 50px" src="{{ Storage::url($fac->image) }}" alt=""></td>
-                                    <td>{{ $fac->description }}</td>
+                                    <td>{!! Str::limit($fac->description , 20) !!}</td>
                                     <td>
                                         <a class="btn btn-warning text-white me-1"
                                             href="{{ url('/admin-facilities/edit', $fac->id) }}">Update</a>
