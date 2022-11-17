@@ -19,21 +19,6 @@
     </div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-lg-4 col-xlg-3 col-md-12">
-                <div class="white-box">
-                    <div class="user-bg"> <img width="100%" alt="user"
-                            src="{{ url('admin/plugins/images/large/img1.jpg') }}">
-                        <div class="overlay-box">
-                            <div class="user-content">
-                                <a href="javascript:void(0)"><img src="{{ url('admin/plugins/images/users/genu.jpg') }}"
-                                        class="thumb-lg img-circle" alt="img"></a>
-                                <h4 class="text-white mt-2">{{ $user->name }}</h4>
-                                <h5 class="text-white mt-2">{{ $user->email }}</h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-8 col-xlg-9 col-md-12">
                 <div class="card">
                     <div class="card-body">
@@ -57,25 +42,7 @@
                                     <input type="password" value="password" class="form-control p-0 border-0">
                                 </div>
                             </div>
-                            <div class="form-group mb-4">
-                                <label class="col-md-12 p-0">Phone No</label>
-                                <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" placeholder="123 456 7890" class="form-control p-0 border-0">
-                                </div>
-                            </div>
-                            <div class="form-group mb-4">
-                                <label class="col-sm-12">Select Country</label>
-
-                                <div class="col-sm-12 border-bottom">
-                                    <select class="form-select shadow-none p-0 border-0 form-control-line">
-                                        <option>London</option>
-                                        <option>India</option>
-                                        <option>Usa</option>
-                                        <option>Canada</option>
-                                        <option>Thailand</option>
-                                    </select>
-                                </div>
-                            </div>
+                        
                             <div class="form-group mb-4">
                                 <div class="col-sm-12">
                                     <button class="btn btn-success">Update Profile</button>
