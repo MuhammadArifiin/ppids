@@ -17,29 +17,38 @@
             </div>
         </div>
     </div>
+    @if ($errors->any())
+    <div class="alert alert-danger mt-2 mb-2">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-8 col-xlg-9 col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <form class="form-horizontal form-material">
+                        <form class="form-horizontal form-material" action="{{ url('/admin-profile-update') }}">
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Full Name</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="text" placeholder="{{ $user->name }}" class="form-control p-0 border-0">
+                                    <input type="text" value="{{ Auth::user()->name }}" name="name" class="form-control p-0 border-0">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label for="example-email" class="col-md-12 p-0">Email</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="email" placeholder="{{ $user->email }}"
-                                        class="form-control p-0 border-0" name="example-email" id="example-email">
+                                    <input type="email" value="{{ Auth::user()->email }}"
+                                        class="form-control p-0 border-0" name="email" id="example-email">
                                 </div>
                             </div>
                             <div class="form-group mb-4">
                                 <label class="col-md-12 p-0">Password</label>
                                 <div class="col-md-12 border-bottom p-0">
-                                    <input type="password" value="password" class="form-control p-0 border-0">
+                                    <input type="password" value="{{ Auth::user()->password }}" name="password" class="form-control p-0 border-0">
                                 </div>
                             </div>
                         

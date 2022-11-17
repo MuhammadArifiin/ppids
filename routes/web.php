@@ -38,6 +38,7 @@ Route::get('/user/contact', [contactsController::class, 'index']);
 Route::middleware('auth')->group(function(){
 Route::get('/admin-dashboard', [adminController::class, 'dashboard']);
 Route::get('/admin-profile', [adminProfileController::class, 'index']);
+Route::get('/admin-profile-update', [adminProfileController::class, 'update']);
 
 Route::get('/admin-divisions', [adminDivisionsController::class, 'index']);
 Route::get('/admin-divisions/add', [adminDivisionsController::class, 'create']);
