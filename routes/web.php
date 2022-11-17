@@ -27,12 +27,11 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [landingController::class, 'index']);
-Route::get('/user/about', [landingController::class, 'about']);
-
-Route::get('/user/divisions', [divisionsController::class, 'index']);
-Route::get('/user/facilities', [facilitiesController::class, 'index']);
-Route::get('/user/publications', [publicationsController::class, 'index']);
-Route::get('/user/contact', [contactsController::class, 'index']);
+Route::get('/about', [landingController::class, 'about']);
+Route::get('/divisions', [divisionsController::class, 'index']);
+Route::get('/facilities', [facilitiesController::class, 'index']);
+Route::get('/publications', [publicationsController::class, 'index']);
+Route::get('/contact', [contactsController::class, 'index']);
 
 
 Route::middleware('auth')->group(function(){

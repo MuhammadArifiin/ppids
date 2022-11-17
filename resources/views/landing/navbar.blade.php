@@ -30,16 +30,16 @@
                     <a class="nav-link" href="{{ url('/') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/user/about') }}">About</a>
+                    <a class="nav-link" href="{{ url('about') }}">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/user/divisions') }}">Divisions</a>
+                    <a class="nav-link" href="{{ url('divisions') }}">Divisions</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/user/facilities') }}">Facilities</a>
+                    <a class="nav-link" href="{{ url('facilities') }}">Facilities</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/user/publications') }}">Publications</a>
+                    <a class="nav-link" href="{{ url('publications') }}">Publications</a>
                 </li>
             </ul>
             <a href="{{ url('/user/contact') }}" data-bs-toggle="modal" data-bs-target="#exampleModal"
