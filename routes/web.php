@@ -42,21 +42,21 @@ Route::get('/admin-divisions', [adminDivisionsController::class, 'index']);
 Route::get('/admin-divisions/add', [adminDivisionsController::class, 'create']);
 Route::post('/admin-divisions', [adminDivisionsController::class, 'store']);
 Route::get('/admin-divisions/edit/{id}', [adminDivisionsController::class, 'edit']);
-Route::post('/admin-divisions/update/{id}', [adminDivisionsController::class, 'update'])->name('update');
+Route::post('/admin-divisions/update/{id}', [adminDivisionsController::class, 'update']);
 Route::get("/admin-divisions/{id}", [adminDivisionsController::class, 'delete']);
 
 Route::get('/admin-facilities', [adminFacilitiesController::class, 'index']);
 Route::get('/admin-facilities/add', [adminFacilitiesController::class, 'create']);
 Route::post('/admin-facilities', [adminFacilitiesController::class, 'store']);
 Route::get('/admin-facilities/edit/{id}', [adminFacilitiesController::class, 'edit']);
-Route::post('/admin-facilities/update/{id}', [adminFacilitiesController::class, 'update'])->name('update');
+Route::post('/admin-facilities/update/{id}', [adminFacilitiesController::class, 'update']);
 Route::get("/admin-facilities/{id}", [adminFacilitiesController::class, 'delete']);
 
 Route::get('/admin-publications', [adminPublicationsController::class, 'index']);
 Route::get('/admin-publications/add', [adminPublicationsController::class, 'create']);
 Route::post('/admin-publications', [adminPublicationsController::class, 'store']);
 Route::get('/admin-publications/edit/{id}', [adminPublicationsController::class, 'edit']);
-Route::post('/admin-publications/update/{id}', [adminPublicationsController::class, 'update'])->name('update');
+Route::post('/admin-publications/update/{id}', [adminPublicationsController::class, 'update']);
 Route::get("/admin-publications/{id}", [adminPublicationsController::class, 'delete']);
 
 Route::get('/admin-login', [loginController::class, 'index']);
