@@ -16,6 +16,13 @@
             </div>
         </div>
     </div>
+    <div class="alert alert-danger mt-2 mb-2">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
@@ -24,20 +31,20 @@
                         @csrf
                         <div class="mb-3">
                             <label for="date" class="form-label">Date</label>
-                            <input type="date" class="form-control" id="date" name="date">
+                            <input type="date" value="{{ old('date') }}" class="form-control" id="date" name="date">
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="file" class="form-control" id="image" name="image">
+                            <input type="file"  class="form-control" id="image" name="image">
                         </div>
                         
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
-                            <input type="text" class="form-control" id="title" name="title">
+                            <input type="text"  value="{{ old('title') }}" class="form-control" id="title" name="title">
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">Content</label>
-                            <input type="text" class="form-control" id="content" name="content">
+                            <input type="text"  value="{{ old('content') }}" class="form-control" id="content" name="content">
                         </div>
                        
                         <button type="submit" class="btn btn-info text-white">Submit</button>

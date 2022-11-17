@@ -53,6 +53,13 @@ class adminPublicationsController extends Controller
     {
         $publications = Publications::find($id);
 
+
+        $request->validate([
+            'date' => 'required',
+            'title' => 'required',
+            'content' => 'required',
+            'image' => 'max:1500|mimes:png,jpg',
+        ]);
        
 
         if($request->file('image')){
