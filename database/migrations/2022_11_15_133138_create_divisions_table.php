@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('division');
             $table->string('employee');
+            $table->string('image');
             $table->timestamps();
         });
     }
