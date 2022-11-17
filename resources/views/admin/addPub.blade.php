@@ -16,6 +16,7 @@
             </div>
         </div>
     </div>
+    @if ($errors->any())
     <div class="alert alert-danger mt-2 mb-2">
         <ul>
             @foreach ($errors->all() as $error)
@@ -23,6 +24,7 @@
             @endforeach
         </ul>
     </div>
+    @endif
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
