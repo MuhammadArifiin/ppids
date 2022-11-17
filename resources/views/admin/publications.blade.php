@@ -47,8 +47,8 @@
                                     <td>{{ $i++ }}</td>
                                     <td class="txt-oflo">{{ $pub->date }}</td>
                                     <td><img style="height: 50px" src="{{ Storage::url($pub->image) }}" alt=""></td>
-                                    <td class="txt-oflo">{{ $pub->title }}</td>
-                                    <td>{{ $pub->content }}</td>
+                                    <td class="txt-oflo">{!! Str::limit( $pub->title, 50) !!}</td>
+                                    <td>{!! Str::limit($pub->content, 20) !!}</td>
                                     <td>
                                         <a class="btn btn-warning text-white me-1" href="{{ url('/admin-publications/edit', $pub->id) }}">Update</a>
                                         <form onsubmit="return confirm('Data akan dihapus?')" class='d-inline' action="{{ url('/admin-publications', $pub->id) }}"
