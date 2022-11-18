@@ -19,11 +19,6 @@
                         </a>
                     </form>
                 </li>
-                <li>
-                    <a class="profile-pic" href="#">
-                        <img src="{{ url('admin/plugins/images/users/varun.jpg') }}" alt="user-img" width="36"
-                            class="img-circle"><span class="text-white font-medium">Steave</span></a>
-                </li>
             </ul>
         </div>
     </nav>
@@ -66,6 +61,17 @@
                         <i class="far fa-edit" aria-hidden="true"></i>
                         <span class="hide-menu">Publications</span>
                     </a>
+                </li>
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-logut') }}"
+                        aria-expanded="false" href="{{ url('/admin-logout') }}"
+                        onclick="event.preventDefault(); document.getElementById('frm-logout').submit();">
+                        <i class="fas fa-exclamation" aria-hidden="true"></i>
+                        <span class="hide-menu">Logout</span>
+                    </a>
+                    <form id="frm-logout" action="{{ url('/admin-logout') }}" method="POST" style="display: none;">
+                        {{ csrf_field() }}
+                    </form>
                 </li>
             </ul>
         </nav>

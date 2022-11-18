@@ -20,7 +20,7 @@
     <div class="alert alert-danger mt-2 mb-2">
         <ul>
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
@@ -29,8 +29,9 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                   
-                    <form action="{{ url('/admin-divisions/update',$divisions->id) }}" method="POST" enctype="multipart/form-data">
+
+                    <form action="{{ url('/admin-divisions/update',$divisions->id) }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="division" class="form-label">Division</label>
@@ -41,16 +42,17 @@
                             <label for="image" class="form-label">Image</label>
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
-                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($divisions->image) }}" alt=""></td>
+                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($divisions->image) }}" alt="">
+                        </td>
                         <div class="mb-3">
                             <label for="employee" class="form-label">Employee</label>
                             <input type="text" class="form-control" id="employee" name="employee"
                                 value="{{ $divisions->employee }}">
                         </div>
-                     
+
                         <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
-                  
+
                 </div>
             </div>
         </div>

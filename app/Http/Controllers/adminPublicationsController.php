@@ -39,7 +39,7 @@ class adminPublicationsController extends Controller
         $data->image = $request->file('image')->store('asset/publication', 'public');
         $data->save();
 
-        Alert::success('success', 'Tambah data berhasil');
+        Alert::success('success', 'Data added successfully');
         return redirect()->to('/admin-publications');
     }
 
@@ -60,21 +60,20 @@ class adminPublicationsController extends Controller
             'content' => 'required',
             'image' => 'max:1500|mimes:png,jpg',
         ]);
-       
 
-        if($request->file('image')){
-            Storage::disk('local')->delete('public/'. $publications->image);
+
+        if ($request->file('image')) {
+            Storage::disk('local')->delete('public/' . $publications->image);
             $publications->image = $request->file('image')->store('asset/publication', 'public');
-            
         }
-      
+
         $publications->date = $request->date;
         $publications->author = Auth::user()->name;
         $publications->title = $request->title;
         $publications->content = $request->content;
         $publications->update();
 
-        Alert::success('success', 'Edit data berhasil');
+        Alert::success('success', 'Data updated successfully');
         return redirect()->to('/admin-publications');
     }
 
@@ -82,10 +81,10 @@ class adminPublicationsController extends Controller
     public function delete($id)
     {
         $data = Publications::find($id);
-        Storage::disk('local')->delete('public/'. $data->image);
+        Storage::disk('local')->delete('public/' . $data->image);
         $data->delete();
 
-        Alert::success('success', 'Hapus data berhasil');
+        Alert::success('success', 'Data deleted successfully');
         return redirect()->to('/admin-publications');
     }
 }

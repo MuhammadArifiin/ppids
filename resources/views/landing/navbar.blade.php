@@ -42,8 +42,8 @@
                     <a class="nav-link" href="{{ url('publications') }}">Publications</a>
                 </li>
             </ul>
-            <a href="{{ url('/user/contact') }}" data-bs-toggle="modal" data-bs-target="#exampleModal"
-                class="btn btn-brand ms-lg-3">Contact</a>
+            {{-- <a href="{{ url('/user/contact') }}" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                class="btn btn-brand ms-lg-3">Contact</a> --}}
         </div>
     </div>
 </nav>

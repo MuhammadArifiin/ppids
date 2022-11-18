@@ -20,7 +20,7 @@
     <div class="alert alert-danger mt-2 mb-2">
         <ul>
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
@@ -33,22 +33,21 @@
                         @csrf
                         <div class="mb-3">
                             <label for="date" class="form-label">Date</label>
-                            <input type="date" value="{{ old('date') }}" class="form-control" id="date" name="date">
+                            <input type="date" class="form-control" id="date" name="date">
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="file"  class="form-control" id="image" name="image">
+                            <input type="file" class="form-control" id="image" name="image">
                         </div>
-                        
+
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
-                            <input type="text"  value="{{ old('title') }}" class="form-control" id="title" name="title">
+                            <input type="text" class="form-control" id="title" name="title">
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">Content</label>
-                            <input type="text"  value="{{ old('content') }}" class="form-control" id="content" name="content">
+                            <textarea name="content" id="task-textarea" class="form-control" cols="30" rows="10"></textarea>
                         </div>
-                       
                         <button type="submit" class="btn btn-info text-white">Submit</button>
                     </form>
                 </div>
@@ -56,4 +55,14 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#task-textarea' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+</script>
 @endsection

@@ -18,14 +18,9 @@
             <div class="col-lg-4 col-md-8">
                 <div class="team-member">
                     <div class="image">
-                        <img src="{{ Storage::url($div->image) }}" alt="">
-                        <div class="social-icons">
-                            <a href="#"><i class='bx bxl-facebook'></i></a>
-                            <a href="#"><i class='bx bxl-twitter'></i></a>
-                            <a href="#"><i class='bx bxl-instagram'></i></a>
-                            <a href="#"><i class='bx bxl-pinterest'></i></a>
+                        <div class="thumbnail">
+                            <img src="{{ Storage::url($div->image) }}" alt="">
                         </div>
-                        <div class="overlay"></div>
                     </div>
                     <h5>{{ $div->employee }}</h5>
                     <p>{{ $div->division }}</p>

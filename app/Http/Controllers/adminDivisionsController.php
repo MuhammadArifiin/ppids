@@ -35,7 +35,7 @@ class adminDivisionsController extends Controller
         $data->employee = $request->input('employee');
         $data->save();
 
-        Alert::success('success', 'Tambah data berhasil');
+        Alert::success('success', 'Data added successfully');
         return redirect()->to('/admin-divisions');
     }
 
@@ -56,15 +56,13 @@ class adminDivisionsController extends Controller
         if($request->file('image')){
             Storage::disk('local')->delete('public/'. $divisions->image);
             $divisions->image = $request->file('image')->store('asset/divisions', 'public');
-            
         }
-
 
         $divisions->division = $request->division;
         $divisions->employee = $request->employee;
         $divisions->update();
 
-        Alert::success('success', 'Edit data berhasil');
+        Alert::success('success', 'Data updated successfully');
         return redirect()->to('/admin-divisions');
     }
 
@@ -74,7 +72,7 @@ class adminDivisionsController extends Controller
         Storage::disk('local')->delete('public/'. $data->image);
         $data->delete();
 
-        Alert::success('success', 'Hapus data berhasil');
+        Alert::success('success', 'Data deleted successfully');
         return redirect()->to('/admin-divisions');
     }
 }

@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div id="main-wrapper" data-layout="vertical" data-navbarbg="skin5" data-sidebartype="full"
         data-sidebar-position="absolute" data-header-position="absolute" data-boxed-layout="full">
 
@@ -38,8 +39,12 @@
     <script src="{{ url('admin/js/sidebarmenu.js') }}"></script>
     <script src="{{ url('admin/js/custom.js') }}"></script>
     <script src="{{ url('admin/plugins/bower_components/chartist/dist/chartist.min.js') }}"></script>
-    <script src="{{ url('admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js') }}"></script>
+    <script
+        src="{{ url('admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.min.js') }}">
+    </script>
     <script src="{{ url('admin/js/pages/dashboards/dashboard1.js') }}"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/35.3.1/classic/ckeditor.js"></script>
+    @yield('scripts')
 </body>
 
 </html>

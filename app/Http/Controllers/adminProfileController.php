@@ -15,32 +15,24 @@ class adminProfileController extends Controller
         return view('admin.profile', compact('user'));
     }
 
-    public function update(Request $request){
-      
-    
+    public function update(Request $request)
+    {
         $aatr = $request->all();
 
-        if($request->password)
-        {
+        if ($request->password) {
             $aatr['password'] =  bcrypt($request->password);
-        }
-        else
-        {
+        } else {
             unset($aatr['password']);
         }
 
         $data = User::find(Auth::user()->id);
         $request->validate([
             'name' => 'required',
-            'email' =>  'required| unique:users,email,'.$data->id,
-
-           
+            'email' =>  'required| unique:users,email,' . $data->id,
         ]);
 
         $data->update($aatr);
-     
+        Alert::success('success', 'Data updated successfully');
         return redirect()->to('/admin-profile');
-        
-     
     }
 }

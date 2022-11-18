@@ -20,7 +20,7 @@
     <div class="alert alert-danger mt-2 mb-2">
         <ul>
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
@@ -29,7 +29,8 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                    <form action="{{ url('/admin-publications/update',$publications->id) }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('/admin-publications/update',$publications->id) }}" method="POST"
+                        enctype="multipart/form-data">
                         @csrf
                         <div class="mb-3">
                             <label for="date" class="form-label">Date</label>
@@ -40,7 +41,8 @@
                             <label for="image" class="form-label">Image</label>
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
-                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($publications->image) }}" alt=""></td>
+                        <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($publications->image) }}"
+                                alt=""></td>
                         <div class="mb-3">
                             <label for="title" class="form-label">Title</label>
                             <input type="text" class="form-control" id="title" name="title"
@@ -48,10 +50,9 @@
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">Content</label>
-                            <input type="text" class="form-control" id="content" name="content"
-                                value="{{ $publications->content }}">
+                            <textarea name="content" id="task-textarea" class="form-control" cols="30" rows="10"
+                                value="{{ $publications->content }}"></textarea>
                         </div>
-                     
                         <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
                 </div>
@@ -59,4 +60,14 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+    ClassicEditor
+            .create( document.querySelector( '#task-textarea' ) )
+            .catch( error => {
+                console.error( error );
+            } );
+</script>
 @endsection

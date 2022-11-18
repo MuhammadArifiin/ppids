@@ -20,7 +20,7 @@
     <div class="alert alert-danger mt-2 mb-2">
         <ul>
             @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
+            <li>{{ $error }}</li>
             @endforeach
         </ul>
     </div>
@@ -37,13 +37,12 @@
                         </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Image</label>
-                            <input type="file"  class="form-control" id="image" name="image">
+                            <input type="file" class="form-control" id="image" name="image">
                         </div>
                         <div class="mb-3">
                             <label for="description" class="form-label">Description</label>
                             <input type="text" class="form-control" id="description" name="description">
                         </div>
-                 
                         <button type="submit" class="btn btn-info text-white">Submit</button>
                     </form>
                 </div>
