@@ -10,7 +10,15 @@
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Facilities</a></li>
+                        <form action="{{url('/admin-facilities/search')}}" method="GET" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="search" placeholder="Search for">
+                                <button type="submit" class="btn btn-info">
+                                    <i class="fas fa-search fa-sm"></i> Search
+                                </button>
+                                </span>
+                            </div>
+                        </form>
                     </ol>
                 </div>
             </div>
@@ -57,6 +65,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        {!! $facilities->links() !!}
                     </div>
                 </div>
             </div>

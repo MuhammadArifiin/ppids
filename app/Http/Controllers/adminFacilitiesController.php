@@ -11,7 +11,7 @@ class adminFacilitiesController extends Controller
 {
     public function index()
     {
-        $facilities = Facilities::all();
+        $facilities = Facilities::paginate(10);
         return view('admin.facilities', compact('facilities'));
     }
 
@@ -47,8 +47,6 @@ class adminFacilitiesController extends Controller
 
     public function update(Request $request, $id)
     {
-
-
         $facilities = Facilities::find($id);
 
         $request->validate([
@@ -56,7 +54,6 @@ class adminFacilitiesController extends Controller
             'description' => 'required',
             'image' => 'max:1500|mimes:png,jpg'
         ]);
-
 
         if ($request->file('image')) {
             Storage::disk('local')->delete('public/' . $facilities->image);
@@ -70,7 +67,6 @@ class adminFacilitiesController extends Controller
         return redirect()->to('/admin-facilities');
     }
 
-
     public function delete($id)
     {
         $data = Facilities::find($id);
@@ -79,5 +75,14 @@ class adminFacilitiesController extends Controller
 
         Alert::success('success', 'Data deleted successfully');
         return redirect()->to('/admin-facilities');
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+
+        $facilities = Facilities::where('name', 'LIKE', '%' . $keyword . '%')->orWhere('description', 'LIKE', '%' . $keyword . '%')->paginate(10);
+
+        return view('admin.facilities', compact('facilities'));
     }
 }

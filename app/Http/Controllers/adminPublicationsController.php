@@ -12,7 +12,7 @@ class adminPublicationsController extends Controller
 {
     public function index()
     {
-        $publications = Publications::all();
+        $publications = Publications::paginate(10);
         return view('admin.publications', compact('publications'));
     }
 
@@ -53,14 +53,12 @@ class adminPublicationsController extends Controller
     {
         $publications = Publications::find($id);
 
-
         $request->validate([
             'date' => 'required',
             'title' => 'required',
             'content' => 'required',
             'image' => 'max:1500|mimes:png,jpg',
         ]);
-
 
         if ($request->file('image')) {
             Storage::disk('local')->delete('public/' . $publications->image);
@@ -77,7 +75,6 @@ class adminPublicationsController extends Controller
         return redirect()->to('/admin-publications');
     }
 
-
     public function delete($id)
     {
         $data = Publications::find($id);
@@ -86,5 +83,14 @@ class adminPublicationsController extends Controller
 
         Alert::success('success', 'Data deleted successfully');
         return redirect()->to('/admin-publications');
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+
+        $publications = Publications::where('title', 'LIKE', '%' . $keyword . '%')->orWhere('content', 'LIKE', '%' . $keyword . '%')->paginate(10);
+        
+        return view('admin.publications', compact('publications'));
     }
 }

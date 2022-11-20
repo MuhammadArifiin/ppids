@@ -7,7 +7,9 @@
         <div class="row justify-content-center">
             <div class="col-md-9">
                 <div class="service">
-                    <img src="{{ Storage::url($publications->image) }}" style="width:100%;height:auto;" class="mb-3" alt="">
+                    <div class="article d-flex justify-content-center">
+                        <img src="{{ Storage::url($publications->image) }}" style="width:60%;height:auto;" class="mb-3" alt="">
+                    </div>
                     <div class="detail my-3">
                         <small>{{ $publications->date }}</small> | <small>{{ $publications->author }}</small>
                     </div>

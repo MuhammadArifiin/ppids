@@ -9,7 +9,7 @@
             <a class="nav-toggler waves-effect waves-light text-dark d-block d-md-none" href="javascript:void(0)"><i
                     class="ti-menu ti-close"></i></a>
         </div>
-        <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+        {{-- <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
             <ul class="navbar-nav ms-auto d-flex align-items-center">
                 <li class=" in">
                     <form role="search" class="app-search d-none d-md-block me-3">
@@ -20,7 +20,7 @@
                     </form>
                 </li>
             </ul>
-        </div>
+        </div> --}}
     </nav>
 </header>
 <aside class="left-sidebar" data-sidebarbg="skin6">

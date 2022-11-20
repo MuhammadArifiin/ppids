@@ -11,7 +11,7 @@ class adminDivisionsController extends Controller
 {
     public function index()
     {
-        $divisions = Divisions::all();
+        $divisions = Divisions::paginate(10);
         return view('admin.divisions', compact('divisions'));
     }
 
@@ -74,5 +74,14 @@ class adminDivisionsController extends Controller
 
         Alert::success('success', 'Data deleted successfully');
         return redirect()->to('/admin-divisions');
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search;
+
+        $divisions = Divisions::where('division', 'LIKE', '%' . $keyword . '%')->orWhere('employee', 'LIKE', '%' . $keyword . '%')->paginate(10);
+
+        return view('admin.divisions', compact('divisions'));
     }
 }

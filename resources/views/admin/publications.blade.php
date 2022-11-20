@@ -13,7 +13,15 @@
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Publications</a></li>
+                        <form action="{{url('/admin-publications/search')}}" method="GET" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" name="search" placeholder="Search for">
+                                <button type="submit" class="btn btn-info">
+                                    <i class="fas fa-search fa-sm"></i> Search
+                                </button>
+                                </span>
+                            </div>
+                        </form>
                     </ol>
                 </div>
             </div>
@@ -50,9 +58,10 @@
                                     <td class="txt-oflo">{!! Str::limit( $pub->title, 50) !!}</td>
                                     <td>{!! Str::limit($pub->content, 20) !!}</td>
                                     <td>
-                                        <a class="btn btn-warning text-white me-1" href="{{ url('/admin-publications/edit', $pub->id) }}">Update</a>
-                                        <form onsubmit="return confirm('Data akan dihapus?')" class='d-inline' action="{{ url('/admin-publications', $pub->id) }}"
-                                            method="get">
+                                        <a class="btn btn-warning text-white me-1"
+                                            href="{{ url('/admin-publications/edit', $pub->id) }}">Update</a>
+                                        <form onsubmit="return confirm('Data akan dihapus?')" class='d-inline'
+                                            action="{{ url('/admin-publications', $pub->id) }}" method="get">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger text-white" type="submit">Delete</button>
@@ -62,6 +71,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                    </div>
+                    <div class="d-flex justify-content-end mt-3">
+                        {!! $publications->links() !!}
                     </div>
                 </div>
             </div>
