@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminAboutController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\adminDivisionsController;
 use App\Http\Controllers\adminFacilitiesController;
@@ -38,6 +39,8 @@ Route::get('/publications/{id}', [publicationsController::class, 'getArticle']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin-dashboard', [adminController::class, 'dashboard']);
+    Route::get('/admin-about', [AdminAboutController::class, 'index']);
+    Route::post('/admin-about-update-or-create', [AdminAboutController::class, 'createOrUpdate']);
     Route::get('/admin-profile', [adminProfileController::class, 'index']);
     Route::get('/admin-profile-update', [adminProfileController::class, 'update']);
 
