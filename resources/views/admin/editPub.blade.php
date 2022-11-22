@@ -50,8 +50,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="content" class="form-label">Content</label>
-                            <textarea name="content" id="task-textarea" class="form-control" cols="30" rows="10"
-                                value="{{ $publications->content }}"></textarea>
+                            <textarea name="content" id="task-textarea" class="form-control" cols="30"
+                                rows="10">{{ $publications->content }}</textarea>
                         </div>
                         <button type="submit" class="btn btn-success text-white">Update</button>
                     </form>
