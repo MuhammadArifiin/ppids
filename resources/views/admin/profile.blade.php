@@ -2,7 +2,6 @@
 @section('title', 'Profile')
 @section('content')
 <div class="page-wrapper">
-    @foreach ($user as $user)
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -17,15 +16,6 @@
             </div>
         </div>
     </div>
-    @if ($errors->any())
-    <div class="alert alert-danger mt-2 mb-2">
-        <ul>
-            @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-    @endif
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
@@ -65,6 +55,5 @@
             </div>
         </div>
     </div>
-    @endforeach
 </div>
 @endsection
