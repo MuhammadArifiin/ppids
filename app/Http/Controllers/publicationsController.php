@@ -10,6 +10,7 @@ class publicationsController extends Controller
     public function index()
     {
         $publications = Publications::all();
+        // dd($publications);
         return view('landing.publications', compact('publications'));
     }
 

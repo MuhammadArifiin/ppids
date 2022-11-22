@@ -8,7 +8,7 @@ use Laravel\Scout\Searchable;
 
 class Publications extends Model
 {
-    
+
     use HasFactory, Searchable;
     protected $table = "publications";
     protected $fillable = [
@@ -19,7 +19,8 @@ class Publications extends Model
         'content'
     ];
 
-    public function toSearchableArray(){
+    public function toSearchableArray()
+    {
         return [
             'title' => $this->title,
             'content' => $this->content,
