@@ -13,7 +13,7 @@
     <meta name="robots" content="noindex,nofollow">
     <title>@yield('title')</title>
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
-    <link rel="icon" type="{{ url('image/png') }}" sizes="16x16" href="{{ url('admin/plugins/images/favicon.png') }}">
+    <link rel="icon" type="{{ url('image/png') }}" sizes="16x16" href="{{ url('assets/upr.png') }}">
     <link href="{{ url('admin/plugins/bower_components/chartist/dist/chartist.min.css') }}" rel="stylesheet">
     <link rel="stylesheet"
         href="{{ url('admin/plugins/bower_components/chartist-plugin-tooltips/dist/chartist-plugin-tooltip.css') }}">

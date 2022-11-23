@@ -21,8 +21,4 @@
             </div>
         </div>
     </div>
-    <div class="footer-bottom text-center">
-        <p class="mb-0">Copyright vicpra 2022. All rights Reserved</p> Distributed By <a
-            hrefs="https://themewagon.com">ThemeWagon</a>
-    </div>
 </footer>
