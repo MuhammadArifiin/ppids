@@ -17,8 +17,7 @@ class adminFacilitiesController extends Controller
 
     public function create()
     {
-        $facilities = Facilities::all();
-        return view('admin.addFac', compact('facilities'));
+        return view('admin.addFac');
     }
 
     public function store(Request $request)

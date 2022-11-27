@@ -55,7 +55,7 @@
                                         <a class="btn btn-warning text-white me-1"
                                             href="{{ url('/admin-facilities/edit', $fac->id) }}">Update</a>
                                         <form onsubmit="return confirm('Data akan dihapus?')" class='d-inline'
-                                            action="{{ url('/admin-facilities', $fac->id) }}" method="get">
+                                            action="{{ url('/admin-facilities', $fac->id) }}" method="post">
                                             @csrf
                                             @method('DELETE')
                                             <button class="btn btn-danger text-white" type="submit">Delete</button>

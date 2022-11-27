@@ -18,8 +18,7 @@ class adminPublicationsController extends Controller
 
     public function create()
     {
-        $publications = Publications::all();
-        return view('admin.addPub', compact('publications'));
+        return view('admin.addPub');
     }
 
     public function store(Request $request)

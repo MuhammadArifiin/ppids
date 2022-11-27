@@ -32,6 +32,7 @@
                     <form action="{{ url('/admin-publications/update',$publications->id) }}" method="POST"
                         enctype="multipart/form-data">
                         @csrf
+                        @method('PUT')
                         <div class="mb-3">
                             <label for="date" class="form-label">Date</label>
                             <input type="text" class="form-control" id="date" name="date"

@@ -17,8 +17,7 @@ class adminDivisionsController extends Controller
 
     public function create()
     {
-        $divisions = Divisions::all();
-        return view('admin.addDiv', compact('divisions'));
+        return view('admin.addDiv');
     }
 
     public function store(Request $request)
@@ -39,7 +38,8 @@ class adminDivisionsController extends Controller
         return redirect()->to('/admin-divisions');
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $divisions = Divisions::find($id);
         return view('admin.editDiv', compact('divisions'));
     }
@@ -53,8 +53,8 @@ class adminDivisionsController extends Controller
             'image' => 'max:1500|mimes:png,jpg'
         ]);
 
-        if($request->file('image')){
-            Storage::disk('local')->delete('public/'. $divisions->image);
+        if ($request->file('image')) {
+            Storage::disk('local')->delete('public/' . $divisions->image);
             $divisions->image = $request->file('image')->store('asset/divisions', 'public');
         }
 
@@ -69,7 +69,7 @@ class adminDivisionsController extends Controller
     public function delete($id)
     {
         $data = Divisions::find($id);
-        Storage::disk('local')->delete('public/'. $data->image);
+        Storage::disk('local')->delete('public/' . $data->image);
         $data->delete();
 
         Alert::success('success', 'Data deleted successfully');
