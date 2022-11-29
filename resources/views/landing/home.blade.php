@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Home')
+@section('title', 'Beranda')
 @section('content')
 <!-- SLIDER -->
 <div class="owl-carousel owl-theme hero-slider">
@@ -9,8 +9,8 @@
                 <div class="col-12 text-center text-white">
                     <h6 class="text-white text-uppercase">PPIDS universitas palangka raya</h6>
                     <h1 class="display-3 my-4">Pusat Pengembangan infrastruktur<br /> informasi data spasial</h1>
-                    <a href="{{ url('/about') }}" class="btn btn-brand">About</a>
-                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Publication</a>
+                    <a href="{{ url('/about') }}" class="btn btn-brand">Tentang</a>
+                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Publikasi</a>
                 </div>
             </div>
         </div>
@@ -21,8 +21,8 @@
                 <div class="col-12 col-lg-10 offset-lg-1 text-white">
                     <h6 class="text-white text-uppercase">pusat pengembangan infrastruktur informasi data spasial</h6>
                     <h1 class="display-3 my-4">ppids<br />universitas palangka raya</h1>
-                    <a href="{{ url('/about') }}" class="btn btn-brand">About</a>
-                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Publication</a>
+                    <a href="{{ url('/about') }}" class="btn btn-brand">Tentang</a>
+                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Publikasi</a>
                 </div>
             </div>
         </div>
@@ -35,8 +35,8 @@
         <div class="row">
             <div class="col-12">
                 <div class="intro">
-                    <h6>Activity</h6>
-                    <h1>What We Do?</h1>
+                    <h6>Aktivitas</h6>
+                    <h1>Seputar PPIDS</h1>
                     <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                         roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
                 </div>
@@ -46,9 +46,9 @@
             <div class="col-md-4">
                 <form action="{{url('/search')}}" method="GET" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" name="find" placeholder="Search for">
+                        <input type="text" class="form-control" name="find" placeholder="Cari...">
                         <button type="submit" class="btn btn-info">
-                            <i class="fas fa-search fa-sm"></i> Search
+                            <i class="fas fa-search fa-sm"></i> Cari
                         </button>
                         </span>
                     </div>
@@ -57,7 +57,7 @@
         </div>
         <div class="row">
             <div class="col-md-8">
-                <h3 class="text-start">Latest Post</h3>
+                <h3 class="text-start">Terbaru</h3>
                 @foreach ($publications as $pub)
                 @php
                 $data = $pub->created_at;
@@ -81,7 +81,7 @@
                 @endforeach
             </div>
             <div class="col-md-4">
-                <h3 class="text-start">Most Viewed</h3>
+                <h3 class="text-start">Populer</h3>
                 <div class="service">
                     @foreach ($mostViewed as $msv)
                     <ul class="list-unstyled">

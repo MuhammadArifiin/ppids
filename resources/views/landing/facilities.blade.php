@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Facilities')
+@section('title', 'Fasilitas')
 @section('content')
 <section class="bg-light" id="portfolio">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="intro">
-                    <h6>Facilities</h6>
-                    <h1>List of Facilities</h1>
+                    <h6>Fasilitas</h6>
+                    <h1>Daftar Fasilitas</h1>
                     <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                         roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
                 </div>

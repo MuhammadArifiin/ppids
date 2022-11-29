@@ -1,16 +1,16 @@
 @extends('layouts.adminApp')
-@section('title', 'Add Division')
+@section('title', 'Edit Publikasi')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Edit Division</h4>
+                <h4 class="page-title">Edit Publikasi</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Add Division</a></li>
+                        <li><a href="#" class="fw-normal">Edit Publikasi</a></li>
                     </ol>
                 </div>
             </div>
@@ -34,23 +34,23 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
-                            <label for="date" class="form-label">Date</label>
+                            <label for="date" class="form-label">Tanggal</label>
                             <input type="text" class="form-control" id="date" name="date"
                                 value="{{ $publications->date }}">
                         </div>
                         <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
+                            <label for="image" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
                         <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($publications->image) }}"
                                 alt=""></td>
                         <div class="mb-3">
-                            <label for="title" class="form-label">Title</label>
+                            <label for="title" class="form-label">Judul</label>
                             <input type="text" class="form-control" id="title" name="title"
                                 value="{{ $publications->title }}">
                         </div>
                         <div class="mb-3">
-                            <label for="content" class="form-label">Content</label>
+                            <label for="content" class="form-label">Konten</label>
                             <textarea name="content" id="task-textarea" class="form-control" cols="30"
                                 rows="10">{{ $publications->content }}</textarea>
                         </div>

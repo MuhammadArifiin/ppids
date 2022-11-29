@@ -22,7 +22,7 @@ class loginController extends Controller
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            Alert::success('success', 'Welcome Admin');
+            Alert::success('success', 'Selamat Datang Admin');
             return redirect('admin-dashboard');
         } else {
             return back()->withErrors([

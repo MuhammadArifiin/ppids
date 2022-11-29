@@ -12,11 +12,6 @@
                         <a href="#"><i class='bx bxl-instagram'></i></a>
                         <a href="#"><i class='bx bxl-pinterest'></i></a>
                     </div>
-                    <div class="col-auto conditions-section">
-                        <a href="#">privacy</a>
-                        <a href="#">terms</a>
-                        <a href="#">disclaimer</i></a>
-                    </div>
                 </div>
             </div>
         </div>

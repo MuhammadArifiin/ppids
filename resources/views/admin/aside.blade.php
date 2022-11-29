@@ -38,35 +38,35 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-profile') }}"
                         aria-expanded="false">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <span class="hide-menu">Profile</span>
+                        <span class="hide-menu">Profil</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-about') }}"
                         aria-expanded="false">
                         <i class="fa fa-user" aria-hidden="true"></i>
-                        <span class="hide-menu">About</span>
+                        <span class="hide-menu">Tentang</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-divisions') }}"
                         aria-expanded="false">
                         <i class="fas fa-sitemap" aria-hidden="true"></i>
-                        <span class="hide-menu">Divisions</span>
+                        <span class="hide-menu">Divisi</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-facilities') }}"
                         aria-expanded="false">
                         <i class="fas fa-th" aria-hidden="true"></i>
-                        <span class="hide-menu">Facilities</span>
+                        <span class="hide-menu">Fasilitas</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-publications') }}"
                         aria-expanded="false">
                         <i class="far fa-edit" aria-hidden="true"></i>
-                        <span class="hide-menu">Publications</span>
+                        <span class="hide-menu">Publikasi</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

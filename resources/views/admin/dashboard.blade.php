@@ -21,7 +21,7 @@
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
                     <div class="d-md-flex mb-0">
-                        <h3 class="box-title mb-0">Welcome Admin</h3>
+                        <h3 class="box-title mb-0">Selamat Datang Admin</h3>
                     </div>
                 </div>
             </div>

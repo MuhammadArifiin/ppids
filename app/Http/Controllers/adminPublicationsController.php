@@ -38,7 +38,7 @@ class adminPublicationsController extends Controller
         $data->image = $request->file('image')->store('asset/publication', 'public');
         $data->save();
 
-        Alert::success('success', 'Data added successfully');
+        Alert::success('success', 'Data Berhasil Ditambahkan');
         return redirect()->to('/admin-publications');
     }
 
@@ -70,7 +70,7 @@ class adminPublicationsController extends Controller
         $publications->content = $request->content;
         $publications->update();
 
-        Alert::success('success', 'Data updated successfully');
+        Alert::success('success', 'Data Berhasil Diperbarui');
         return redirect()->to('/admin-publications');
     }
 
@@ -80,7 +80,7 @@ class adminPublicationsController extends Controller
         Storage::disk('local')->delete('public/' . $data->image);
         $data->delete();
 
-        Alert::success('success', 'Data deleted successfully');
+        Alert::success('success', 'Data Berhasil Dihapus');
         return redirect()->to('/admin-publications');
     }
 

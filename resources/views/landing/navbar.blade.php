@@ -27,19 +27,19 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Home</a>
+                    <a class="nav-link" href="{{ url('/') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('about') }}">About</a>
+                    <a class="nav-link" href="{{ url('about') }}">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('divisions') }}">Divisions</a>
+                    <a class="nav-link" href="{{ url('divisions') }}">Divisi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('facilities') }}">Facilities</a>
+                    <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('publications') }}">Publications</a>
+                    <a class="nav-link" href="{{ url('publications') }}">Publikasi</a>
                 </li>
             </ul>
             {{-- <a href="{{ url('/user/contact') }}" data-bs-toggle="modal" data-bs-target="#exampleModal"

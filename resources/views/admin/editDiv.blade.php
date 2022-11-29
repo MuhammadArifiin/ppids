@@ -1,16 +1,16 @@
 @extends('layouts.adminApp')
-@section('title', 'Add Division')
+@section('title', 'Edit Divisi')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Edit Division</h4>
+                <h4 class="page-title">Edit Divisi</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Add Division</a></li>
+                        <li><a href="#" class="fw-normal">Edit Divisi</a></li>
                     </ol>
                 </div>
             </div>
@@ -35,18 +35,18 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
-                            <label for="division" class="form-label">Division</label>
+                            <label for="division" class="form-label">Divisi</label>
                             <input type="text" class="form-control" id="division" name="division"
                                 value="{{ $divisions->division }}">
                         </div>
                         <div class="mb-3">
-                            <label for="image" class="form-label">Image</label>
+                            <label for="image" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="image" name="image">
                         </div>
                         <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($divisions->image) }}" alt="">
                         </td>
                         <div class="mb-3">
-                            <label for="employee" class="form-label">Employee</label>
+                            <label for="employee" class="form-label">Pegawai</label>
                             <input type="text" class="form-control" id="employee" name="employee"
                                 value="{{ $divisions->employee }}">
                         </div>

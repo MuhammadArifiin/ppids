@@ -34,7 +34,7 @@ class adminFacilitiesController extends Controller
         $data->description = $request->input('description');
         $data->save();
 
-        Alert::success('success', 'Data added successfully');
+        Alert::success('success', 'Data Berhasil Ditambahkan');
         return redirect()->to('/admin-facilities');
     }
 
@@ -62,7 +62,7 @@ class adminFacilitiesController extends Controller
         $facilities->description = $request->description;
         $facilities->update();
 
-        Alert::success('success', 'Data updated successfully');
+        Alert::success('success', 'Data Berhasil Diperbarui');
         return redirect()->to('/admin-facilities');
     }
 
@@ -72,7 +72,7 @@ class adminFacilitiesController extends Controller
         Storage::disk('local')->delete('public/' . $data->image);
         $data->delete();
 
-        Alert::success('success', 'Data deleted successfully');
+        Alert::success('success', 'Data Berhasil Dihapus');
         return redirect()->to('/admin-facilities');
     }
 

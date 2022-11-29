@@ -34,7 +34,7 @@ class adminDivisionsController extends Controller
         $data->employee = $request->input('employee');
         $data->save();
 
-        Alert::success('success', 'Data added successfully');
+        Alert::success('success', 'Data Berhasil Ditambahkan');
         return redirect()->to('/admin-divisions');
     }
 
@@ -62,7 +62,7 @@ class adminDivisionsController extends Controller
         $divisions->employee = $request->employee;
         $divisions->update();
 
-        Alert::success('success', 'Data updated successfully');
+        Alert::success('success', 'Data Berhasil Diperbarui');
         return redirect()->to('/admin-divisions');
     }
 
@@ -72,7 +72,7 @@ class adminDivisionsController extends Controller
         Storage::disk('local')->delete('public/' . $data->image);
         $data->delete();
 
-        Alert::success('success', 'Data deleted successfully');
+        Alert::success('success', 'Data Berhasil Dihapus');
         return redirect()->to('/admin-divisions');
     }
 

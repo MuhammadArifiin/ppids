@@ -32,7 +32,7 @@ class adminProfileController extends Controller
         ]);
 
         $data->update($aatr);
-        Alert::success('success', 'Data updated successfully');
+        Alert::success('success', 'Data Berhasil Diperbarui');
         return redirect()->to('/admin-profile');
     }
 }

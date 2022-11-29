@@ -1,13 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Publications')
+@section('title', 'Publikasi')
 @section('content')
 <section id="blog">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="intro">
-                    <h6>Publications</h6>
-                    <h1>List of Publications</h1>
+                    <h6>Publikasi</h6>
+                    <h1>Daftar Publikasi</h1>
                     <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
                         roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
                 </div>
@@ -18,10 +18,10 @@
             <div class="col-md-4">
                 <form action="{{url('/search')}}" method="GET" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" name="find" placeholder="Search for">
-                            <button type="submit" class="btn btn-info">
-                                <i class="fas fa-search fa-sm"></i> Search
-                            </button>
+                        <input type="text" class="form-control" name="find" placeholder="Cari...">
+                        <button type="submit" class="btn btn-info">
+                            <i class="fas fa-search fa-sm"></i> Cari
+                        </button>
                         </span>
                     </div>
                 </form>
