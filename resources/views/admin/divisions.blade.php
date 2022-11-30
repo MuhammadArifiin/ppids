@@ -1,11 +1,11 @@
 @extends('layouts.adminApp')
-@section('title', 'Divisi')
+@section('title', 'Pengelola')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Divisi</h4>
+                <h4 class="page-title">Pengelola</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
@@ -35,9 +35,9 @@
                         <thead>
                             <tr>
                                 <th class="border-top-0">No</th>
-                                <th class="border-top-0">Divisi</th>
+                                <th class="border-top-0">Jabatan</th>
                                 <th class="border-top-0">Gambar</th>
-                                <th class="border-top-0">Pegawai</th>
+                                <th class="border-top-0">Pengelola</th>
                                 <th class="border-top-0">Action</th>
                             </tr>
                         </thead>

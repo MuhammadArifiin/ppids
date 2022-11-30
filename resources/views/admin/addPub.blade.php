@@ -1,16 +1,16 @@
 @extends('layouts.adminApp')
-@section('title', 'Tambah Publikasi')
+@section('title', 'Tambah Berita')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Tambah Publikasi</h4>
+                <h4 class="page-title">Tambah Berita</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Tambah Publikasi</a></li>
+                        <li><a href="#" class="fw-normal">Tambah Berita</a></li>
                     </ol>
                 </div>
             </div>

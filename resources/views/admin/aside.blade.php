@@ -52,7 +52,7 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-divisions') }}"
                         aria-expanded="false">
                         <i class="fas fa-sitemap" aria-hidden="true"></i>
-                        <span class="hide-menu">Divisi</span>
+                        <span class="hide-menu">Pengelola</span>
                     </a>
                 </li>
                 <li class="sidebar-item">
@@ -66,7 +66,7 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-publications') }}"
                         aria-expanded="false">
                         <i class="far fa-edit" aria-hidden="true"></i>
-                        <span class="hide-menu">Publikasi</span>
+                        <span class="hide-menu">Berita</span>
                     </a>
                 </li>
                 <li class="sidebar-item">

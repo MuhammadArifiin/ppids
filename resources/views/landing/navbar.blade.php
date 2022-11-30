@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-auto">
-                <p> <i class='bx bxs-envelope'></i>ppids@mail.co.id</p>
+                <p> <i class='bx bxs-envelope'></i>ppids@upr.ac.id</p>
                 <p> <i class='bx bxs-phone-call'></i>+62 81234567890</p>
             </div>
             <div class="col-auto social-icons">
@@ -33,13 +33,13 @@
                     <a class="nav-link" href="{{ url('about') }}">Tentang</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('divisions') }}">Divisi</a>
+                    <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('publications') }}">Publikasi</a>
+                    <a class="nav-link" href="{{ url('publications') }}">Berita</a>
                 </li>
             </ul>
             {{-- <a href="{{ url('/user/contact') }}" data-bs-toggle="modal" data-bs-target="#exampleModal"

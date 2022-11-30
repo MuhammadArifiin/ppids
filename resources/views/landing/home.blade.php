@@ -10,7 +10,7 @@
                     <h6 class="text-white text-uppercase">PPIDS universitas palangka raya</h6>
                     <h1 class="display-3 my-4">Pusat Pengembangan infrastruktur<br /> informasi data spasial</h1>
                     <a href="{{ url('/about') }}" class="btn btn-brand">Tentang</a>
-                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Publikasi</a>
+                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Berita</a>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                     <h6 class="text-white text-uppercase">pusat pengembangan infrastruktur informasi data spasial</h6>
                     <h1 class="display-3 my-4">ppids<br />universitas palangka raya</h1>
                     <a href="{{ url('/about') }}" class="btn btn-brand">Tentang</a>
-                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Publikasi</a>
+                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Berita</a>
                 </div>
             </div>
         </div>

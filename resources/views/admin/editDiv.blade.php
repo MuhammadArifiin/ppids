@@ -1,16 +1,16 @@
 @extends('layouts.adminApp')
-@section('title', 'Edit Divisi')
+@section('title', 'Edit Pengelola')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Edit Divisi</h4>
+                <h4 class="page-title">Edit Pengelola</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Edit Divisi</a></li>
+                        <li><a href="#" class="fw-normal">Edit Pengelola</a></li>
                     </ol>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                         @csrf
                         @method('PUT')
                         <div class="mb-3">
-                            <label for="division" class="form-label">Divisi</label>
+                            <label for="division" class="form-label">Jabatan</label>
                             <input type="text" class="form-control" id="division" name="division"
                                 value="{{ $divisions->division }}">
                         </div>
@@ -46,7 +46,7 @@
                         <td><img style="height: 100px" class="mb-4" src="{{ Storage::url($divisions->image) }}" alt="">
                         </td>
                         <div class="mb-3">
-                            <label for="employee" class="form-label">Pegawai</label>
+                            <label for="employee" class="form-label">Pengelola</label>
                             <input type="text" class="form-control" id="employee" name="employee"
                                 value="{{ $divisions->employee }}">
                         </div>
