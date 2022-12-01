@@ -55,13 +55,13 @@
                         <span class="hide-menu">Pengelola</span>
                     </a>
                 </li>
-                {{-- <li class="sidebar-item">
+                <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-facilities') }}"
                         aria-expanded="false">
                         <i class="fas fa-th" aria-hidden="true"></i>
                         <span class="hide-menu">Fasilitas</span>
                     </a>
-                </li> --}}
+                </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-publications') }}"
                         aria-expanded="false">

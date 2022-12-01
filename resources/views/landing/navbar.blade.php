@@ -35,9 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
                 </li>
-                {{-- <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
-                </li> --}}
+                </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('publications') }}">Berita</a>
                 </li>
