@@ -40,7 +40,7 @@ class UserSeeder extends Seeder
         ]);
 
         DB::table('manage_features')->insert([
-            'name_feature' => 'facilities',
+            'name_feature' => 'facility',
             'active' => true,
         ]);
     }
