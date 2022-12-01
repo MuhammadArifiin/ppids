@@ -4,14 +4,14 @@
         <div class="row justify-content-between">
             <div class="col-auto">
                 <p> <i class='bx bxs-envelope'></i>ppids@upr.ac.id</p>
-                <p> <i class='bx bxs-phone-call'></i>+62 81234567890</p>
+                {{-- <p> <i class='bx bxs-phone-call'></i>+62 81234567890</p> --}}
             </div>
-            <div class="col-auto social-icons">
+            {{-- <div class="col-auto social-icons">
                 <a href="#"><i class='bx bxl-facebook'></i></a>
                 <a href="#"><i class='bx bxl-twitter'></i></a>
                 <a href="#"><i class='bx bxl-instagram'></i></a>
                 <a href="#"><i class='bx bxl-pinterest'></i></a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
@@ -35,9 +35,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
-                </li>
+                </li> --}}
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('publications') }}">Berita</a>
                 </li>
