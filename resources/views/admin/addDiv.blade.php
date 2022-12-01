@@ -31,10 +31,18 @@
                 <div class="white-box">
                     <form action="{{ url('/admin-divisions') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <div class="mb-3">
-                            <label for="division" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control" id="division" name="division">
-                        </div>
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Jabatan</label>
+                            <select class="form-control" name="division" id="exampleFormControlSelect1">
+                              <option selected>Choose</option>
+                              <option>Ketua PPIDS UPR</option>
+                              <option>Sekretaris PPIDS UPR</option>
+                              <option>Bidang Infrastruktur dan Pengelolaan Informasi Spasial PPIDS UPR</option>
+                              <option>Bidang Penelitian dan Pengembangan PPIDS UPR</option>
+                              <option>Bidang Pendidikan dan Pelatihan PPIDS UPR</option>
+                              <option>Bidang Kerjasama PPIDS UPR</option>
+                            </select>
+                          </div>
                         <div class="mb-3">
                             <label for="image" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="image" name="image">

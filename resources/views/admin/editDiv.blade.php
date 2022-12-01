@@ -34,11 +34,15 @@
                         enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
-                        <div class="mb-3">
-                            <label for="division" class="form-label">Jabatan</label>
-                            <input type="text" class="form-control" id="division" name="division"
-                                value="{{ $divisions->division }}">
-                        </div>
+                        <select class="form-control" name="division" id="exampleFormControlSelect1">
+                            <option   {{ $divisions->division == "Ketua PPIDS UPR" ? 'selected' : '' }}>Ketua PPIDS UPR</option>
+                            <option  {{ $divisions->division == "Sekretaris PPIDS UPR" ? 'selected' : '' }}>Sekretaris PPIDS UPR</option>
+                            <option  {{ $divisions->division == "Bidang Infrastruktur dan Pengelolaan Informasi Spasial PPIDS UPR" ? 'selected' : '' }}>Bidang Infrastruktur dan Pengelolaan Informasi Spasial PPIDS UPR</option>
+                            <option {{ $divisions->division == "Bidang Penelitian dan Pengembangan PPIDS UPR" ? 'selected' : '' }} >Bidang Penelitian dan Pengembangan PPIDS UPR</option>
+                            <option   {{ $divisions->division == "Bidang Pendidikan dan Pelatihan PPIDS UPR" ? 'selected' : '' }}>Bidang Pendidikan dan Pelatihan PPIDS UPR</option>
+                            <option  {{ $divisions->division == "Bidang Kerjasama PPIDS UPR" ? 'selected' : '' }}>Bidang Kerjasama PPIDS UPR</option>
+                          </select>
+
                         <div class="mb-3">
                             <label for="image" class="form-label">Gambar</label>
                             <input type="file" class="form-control" id="image" name="image">
