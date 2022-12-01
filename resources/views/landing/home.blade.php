@@ -3,7 +3,7 @@
 @section('content')
 <!-- SLIDER -->
 <div class="owl-carousel owl-theme hero-slider">
-    <div class="slide slide1">
+    <div class="slide slide1" style="background-image: url('../img/bg_banner2.jpg');'">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-white">
