@@ -5,7 +5,7 @@
 <div class="owl-carousel owl-theme hero-slider">
    
    @foreach ($backgroundImage as $item)
-    <div class="slide slide1" style="background-image: url('../{{ $item->image }}'');'">
+    <div class="slide slide1" style="background-image: url('{{  Storage::url($item->image)  }}')">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-white">
