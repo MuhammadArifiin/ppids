@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-auto">
-                <p> <i class='bx bxs-envelope'></i>ppids@upr.ac.id</p>
+                <p> <i class='bx bxs-envelope'></i><a href="ppids@upr.ac.id" class="text-white">ppids@upr.ac.id</a></p>
                 {{-- <p> <i class='bx bxs-phone-call'></i>+62 81234567890</p> --}}
             </div>
             {{-- <div class="col-auto social-icons">
