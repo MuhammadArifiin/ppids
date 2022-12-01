@@ -3,7 +3,9 @@
 @section('content')
 <!-- SLIDER -->
 <div class="owl-carousel owl-theme hero-slider">
-    <div class="slide slide1" style="background-image: url('../img/bg_banner2.jpg');'">
+   
+   @foreach ($backgroundImage as $item)
+    <div class="slide slide1" style="background-image: url('../{{ $item->image }}'');'">
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center text-white">
@@ -14,19 +16,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="slide slide2">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-10 offset-lg-1 text-white">
-                    <h6 class="text-white text-uppercase">pusat pengembangan infrastruktur informasi data spasial</h6>
-                    <h1 class="display-3 my-4">ppids<br />universitas palangka raya</h1>
-                    <a href="{{ url('/about') }}" class="btn btn-brand">Tentang</a>
-                    <a href="{{ url('/publications') }}" class="btn btn-outline-light ms-3">Berita</a>
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
+   @endforeach
 </div>
 
 

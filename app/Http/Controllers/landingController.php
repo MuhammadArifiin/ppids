@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\about;
+use App\Models\backgroundImageInHome;
 use App\Models\ManageFeature;
 use App\Models\Publications;
 use Illuminate\Http\Request;
@@ -35,9 +36,12 @@ class landingController extends Controller
         foreach($manageFacility as $data){
             $manageFacility = $data->active;
         }
+
+        $backgroundImage = backgroundImageInHome::take(2)->get();
      
         return view('landing.home')->with(['publications' => $publications, 'mostViewed' => $mostViewed,
-        'managePublication' => $managePublication, 'manageAbout' => $manageAbout, 'manageDivision' => $manageDivision , 'manageFacility' => $manageFacility]);
+        'managePublication' => $managePublication, 'manageAbout' => $manageAbout, 'manageDivision' => $manageDivision , 
+        'manageFacility' => $manageFacility, 'backgroundImage' => $backgroundImage]);
     }
 
 
