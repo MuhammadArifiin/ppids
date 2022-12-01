@@ -8,7 +8,7 @@
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Background Image Home</h4>
+                <h4 class="page-title">Background Image Beranda</h4>
             </div>
         </div>
         <!-- /.col-lg-12 -->
@@ -27,14 +27,15 @@
                                 <tr>
                                     <th class="border-top-0">No</th>
                                     <th class="border-top-0">Gambar</th>
+                                    <th class="border-top-0">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 @php $i=1 @endphp
                                 @foreach ($backgroundImages as $item)
                                 <tr>
-                                    <td>{{ $i++ }}</td>      
-                                    <td><img style="height: 50px" src="{{ Storage::url($item->image) }}" alt=""></td> 
+                                    <td>{{ $i++ }}</td>
+                                    <td><img style="height: 50px" src="{{ Storage::url($item->image) }}" alt=""></td>
                                     <td>
                                         <a class="btn btn-warning text-white me-1"
                                             href="{{ url('/admin-backgroundImage/edit', $item->id) }}">Edit</a>

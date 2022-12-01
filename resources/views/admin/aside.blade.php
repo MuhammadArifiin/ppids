@@ -76,7 +76,7 @@
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-backgroundImage') }}"
                         aria-expanded="false">
                         <i class="far fa-edit" aria-hidden="true"></i>
-                        <span class="hide-menu">Background Image in Home</span>
+                        <span class="hide-menu">Background Image di Beranda</span>
                     </a>
                 </li>
 

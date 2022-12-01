@@ -3,8 +3,8 @@
 @section('content')
 <!-- SLIDER -->
 <div class="owl-carousel owl-theme hero-slider">
-   
-   @foreach ($backgroundImage as $item)
+
+    @foreach ($backgroundImage as $item)
     <div class="slide slide1" style="background-image: url('{{  Storage::url($item->image)  }}')">
         <div class="container">
             <div class="row">
@@ -16,8 +16,8 @@
                 </div>
             </div>
         </div>
-</div>
-   @endforeach
+    </div>
+    @endforeach
 </div>
 
 
@@ -31,7 +31,7 @@
                 </div>
             </div>
         </div>
-        @if ($managePublication == 1)
+        @if ($managePublication === 1)
         <div class="row justify-content-end my-4">
             <div class="col-md-4">
                 <form action="{{url('/search')}}" method="GET" role="search">
@@ -46,9 +46,9 @@
             </div>
         </div>
         @endif
-      
 
-        @if ($managePublication == 1)
+
+        @if ($managePublication === 1)
         <div class="row">
             <div class="col-md-8">
                 <h3 class="text-start">Terbaru</h3>
@@ -67,14 +67,14 @@
                             <a href="{{ url('/publications', $pub->id) }}" class="text-decoration-none">
                                 <h5 class="content-title">{{ $pub->title }}</h5>
                             </a>
-                            <p class="text-justify">{!! \Illuminate\Support\Str::limit($pub->content, 250) !!}</p>
+                            <p class="text-justify">{!! \Illuminate\Support\Str::limit($pub->content, 200) !!}</p>
                             <small class="mb-4">{{ $elapsed }}</small>
                         </div>
                     </div>
                 </div>
                 @endforeach
             </div>
-        
+
             <div class="col-md-4">
                 <h3 class="text-start">Populer</h3>
                 <div class="service">
@@ -87,7 +87,7 @@
                             <hr>
                         </li>
                         <li>
-                            <p class="text-justify">{!! \Illuminate\Support\Str::limit($msv->content, 100) !!}</p>
+                            <p class="text-justify">{!! \Illuminate\Support\Str::limit($msv->content, 80) !!}</p>
                         </li>
                     </ul>
                     @endforeach
@@ -95,12 +95,12 @@
             </div>
         </div>
         @endif
-      
-        
+
+
         @if ($managePublication == 1)
-            <div class="d-flex justify-content-start">
-                {!! $publications->links() !!}
-            </div>
+        <div class="d-flex justify-content-start">
+            {!! $publications->links() !!}
+        </div>
         @endif
     </div>
 </section>

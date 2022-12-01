@@ -1,5 +1,5 @@
 @extends('layouts.adminApp')
-@section('title', 'Tentang')
+@section('title', 'Manajemen Fitur')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
@@ -10,7 +10,7 @@
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Tentang</a></li>
+                        <li><a href="#" class="fw-normal">Manajemen Fitur</a></li>
                     </ol>
                 </div>
             </div>
@@ -25,16 +25,18 @@
         </ul>
     </div>
     @endif
-   
+
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
                         @foreach ($getAllManageFeature as $item)
-                            <div class="mb-3">
-                                <a href="{{ url('/admin-Manage-Feature-change', $item->id) }}"><button class="btn {{ $item->active == 1 ? 'btn-primary' : 'btn-danger' }}">{{ $item->name_feature }}</button></a>
-                            </div>
+                        <div class="mb-3">
+                            <a href="{{ url('/admin-Manage-Feature-change', $item->id) }}"><button
+                                    class="btn {{ $item->active == 1 ? 'btn-primary' : 'btn-danger' }}">{{
+                                    $item->name_feature }}</button></a>
+                        </div>
                         @endforeach
                     </div>
                 </div>
@@ -43,5 +45,3 @@
     </div>
 </div>
 @endsection
-
-

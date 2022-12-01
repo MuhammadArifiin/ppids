@@ -62,6 +62,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin-publications', [adminPublicationsController::class, 'index']);
     Route::get('/admin-publications/add', [adminPublicationsController::class, 'create']);
+    Route::post('/admin-publications/upImage', [adminPublicationsController::class, 'storeImage'])->name('image.upload');
     Route::post('/admin-publications', [adminPublicationsController::class, 'store']);
     Route::get('/admin-publications/edit/{id}', [adminPublicationsController::class, 'edit']);
     Route::put('/admin-publications/update/{id}', [adminPublicationsController::class, 'update']);
