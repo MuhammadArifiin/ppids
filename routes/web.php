@@ -4,16 +4,15 @@ use App\Http\Controllers\AdminAboutController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\adminDivisionsController;
 use App\Http\Controllers\adminFacilitiesController;
+use App\Http\Controllers\AdminManageFeatureController;
 use App\Http\Controllers\adminProfileController;
 use App\Http\Controllers\adminPublicationsController;
-
 use App\Http\Controllers\contactsController;
 use App\Http\Controllers\divisionsController;
 use App\Http\Controllers\facilitiesController;
 use App\Http\Controllers\landingController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\publicationsController;
-use App\Models\Publications;
 use Illuminate\Support\Facades\Route;
 
 
@@ -67,6 +66,9 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin-publications/update/{id}', [adminPublicationsController::class, 'update']);
     Route::get('/admin-publications/search', [adminPublicationsController::class, 'search']);
     Route::delete("/admin-publications/{id}", [adminPublicationsController::class, 'delete']);
+
+    Route::get('/admin-Manage-Feature', [AdminManageFeatureController::class, 'index']);
+    Route::get('/admin-Manage-Feature-change/{id}', [AdminManageFeatureController::class, 'changeActivity']);
 });
 
 Route::get('/admin-login', [loginController::class, 'index'])->name('admin-login');

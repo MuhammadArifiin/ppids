@@ -29,18 +29,32 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Beranda</a>
                 </li>
+
+                @if($manageAbout == 1)
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('about') }}">Tentang</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
-                </li>
+                @endif
+                
+
+                @if ($manageDivision == 1)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
+                    </li>
+                @endif
+               
+                @if ($manageFacility == 1)
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
+                    </li>
+                @endif
+            
+
+                @if ($managePublication == 1)
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('publications') }}">Berita</a>
                 </li>
+                @endif
             </ul>
             {{-- <a href="{{ url('/user/contact') }}" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 class="btn btn-brand ms-lg-3">Contact</a> --}}

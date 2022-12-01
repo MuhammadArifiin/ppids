@@ -8,8 +8,6 @@
                 <div class="intro">
                     <h6>Fasilitas</h6>
                     <h1>Daftar Fasilitas</h1>
-                    <p class="mx-auto">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                        roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old</p>
                 </div>
             </div>
         </div>

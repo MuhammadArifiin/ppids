@@ -40,6 +40,7 @@
                 </div>
             </div>
         </div>
+        @if ($managePublication == 1)
         <div class="row justify-content-end my-4">
             <div class="col-md-4">
                 <form action="{{url('/search')}}" method="GET" role="search">
@@ -53,6 +54,10 @@
                 </form>
             </div>
         </div>
+        @endif
+      
+
+        @if ($managePublication == 1)
         <div class="row">
             <div class="col-md-8">
                 <h3 class="text-start">Terbaru</h3>
@@ -78,6 +83,7 @@
                 </div>
                 @endforeach
             </div>
+        
             <div class="col-md-4">
                 <h3 class="text-start">Populer</h3>
                 <div class="service">
@@ -97,9 +103,14 @@
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-start">
-            {!! $publications->links() !!}
-        </div>
+        @endif
+      
+        
+        @if ($managePublication == 1)
+            <div class="d-flex justify-content-start">
+                {!! $publications->links() !!}
+            </div>
+        @endif
     </div>
 </section>
 @endsection

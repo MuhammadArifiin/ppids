@@ -23,5 +23,25 @@ class UserSeeder extends Seeder
             'password' => Hash::make('123456'),
             'role' => 'admin'
         ]);
+
+        DB::table('manage_features')->insert([
+            'name_feature' => 'about',
+            'active' => true,
+        ]);
+
+        DB::table('manage_features')->insert([
+            'name_feature' => 'division',
+            'active' => true,
+        ]);
+        
+        DB::table('manage_features')->insert([
+            'name_feature' => 'publication',
+            'active' => true,
+        ]);
+
+        DB::table('manage_features')->insert([
+            'name_feature' => 'facilities',
+            'active' => true,
+        ]);
     }
 }

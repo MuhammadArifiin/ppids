@@ -69,6 +69,14 @@
                         <span class="hide-menu">Berita</span>
                     </a>
                 </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-Manage-Feature') }}"
+                        aria-expanded="false">
+                        <i class="far fa-edit" aria-hidden="true"></i>
+                        <span class="hide-menu">Sistem Website</span>
+                    </a>
+                </li>
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-logut') }}"
                         aria-expanded="false" href="{{ url('/admin-logout') }}"
