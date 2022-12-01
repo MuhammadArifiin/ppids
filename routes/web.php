@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminAboutController;
+use App\Http\Controllers\AdminBackgroundImageController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\adminDivisionsController;
 use App\Http\Controllers\adminFacilitiesController;
@@ -69,6 +70,14 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/admin-Manage-Feature', [AdminManageFeatureController::class, 'index']);
     Route::get('/admin-Manage-Feature-change/{id}', [AdminManageFeatureController::class, 'changeActivity']);
+
+    Route::get('/admin-backgroundImage', [AdminBackgroundImageController::class, 'index']);
+    Route::get('/admin-backgroundImage/add', [AdminBackgroundImageController::class, 'create']);
+    Route::post('/admin-backgroundImage', [AdminBackgroundImageController::class, 'store']);
+    Route::get('/admin-backgroundImage/edit/{id}', [AdminBackgroundImageController::class, 'edit']);
+    Route::put('/admin-backgroundImage/update/{id}', [AdminBackgroundImageController::class, 'update']);
+    Route::get('/admin-backgroundImage/search', [AdminBackgroundImageController::class, 'search']);
+    Route::delete("/admin-backgroundImage/{id}", [AdminBackgroundImageController::class, 'delete']);
 });
 
 Route::get('/admin-login', [loginController::class, 'index'])->name('admin-login');

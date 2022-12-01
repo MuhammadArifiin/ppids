@@ -62,11 +62,21 @@
                         <span class="hide-menu">Fasilitas</span>
                     </a>
                 </li>
+
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-publications') }}"
                         aria-expanded="false">
                         <i class="far fa-edit" aria-hidden="true"></i>
                         <span class="hide-menu">Berita</span>
+                    </a>
+                </li>
+
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-backgroundImage') }}"
+                        aria-expanded="false">
+                        <i class="far fa-edit" aria-hidden="true"></i>
+                        <span class="hide-menu">Background Image in Home</span>
                     </a>
                 </li>
 
