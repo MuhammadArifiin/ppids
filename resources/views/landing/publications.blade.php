@@ -39,7 +39,7 @@
                         <a href="{{ url('/publications', $post->id) }}" class="text-decoration-none">
                             <h5 class="content-title">{{ $post->title }}</h5>
                         </a>
-                        <p class="text-justify">{!! \Illuminate\Support\Str::limit($post->content, 100) !!}</p>
+                        <p class="text-justify">{!! \Illuminate\Support\Str::limit($post->content, 20) !!}</p>
                     </div>
                 </article>
             </div>
