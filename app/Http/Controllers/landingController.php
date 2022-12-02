@@ -35,7 +35,7 @@ class landingController extends Controller
             $manageFacility = $data->active;
         }
 
-        $backgroundImage = backgroundImageInHome::take(2)->get();
+        $backgroundImage = backgroundImageInHome::get();
 
         return view('landing.home')->with([
             'publications' => $publications, 'mostViewed' => $mostViewed,
