@@ -5,15 +5,19 @@ use App\Http\Controllers\AdminBackgroundImageController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\adminDivisionsController;
 use App\Http\Controllers\adminFacilitiesController;
+use App\Http\Controllers\AdminManageContact;
 use App\Http\Controllers\AdminManageFeatureController;
+use App\Http\Controllers\AdminManageSocmed;
 use App\Http\Controllers\adminProfileController;
 use App\Http\Controllers\adminPublicationsController;
+use App\Http\Controllers\contactController;
 use App\Http\Controllers\contactsController;
 use App\Http\Controllers\divisionsController;
 use App\Http\Controllers\facilitiesController;
 use App\Http\Controllers\landingController;
 use App\Http\Controllers\loginController;
 use App\Http\Controllers\publicationsController;
+use App\Http\Controllers\socialMediaController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,6 +39,8 @@ Route::get('/divisions', [divisionsController::class, 'index']);
 Route::get('/facilities', [facilitiesController::class, 'index']);
 Route::get('/publications', [publicationsController::class, 'index']);
 Route::get('/search', [publicationsController::class, 'search']);
+Route::get('/socmed', [socialMediaController::class, 'index']);
+Route::get('/contact', [contactController::class, 'index']);
 Route::get('/publications/{id}', [publicationsController::class, 'getArticle']);
 
 Route::middleware('auth')->group(function () {
@@ -79,6 +85,21 @@ Route::middleware('auth')->group(function () {
     Route::put('/admin-backgroundImage/update/{id}', [AdminBackgroundImageController::class, 'update']);
     Route::get('/admin-backgroundImage/search', [AdminBackgroundImageController::class, 'search']);
     Route::delete("/admin-backgroundImage/{id}", [AdminBackgroundImageController::class, 'delete']);
+
+    Route::get('/admin-manage-socmed', [AdminManageSocmed::class, 'index']);
+    Route::get('/admin-manage-socmed/add', [AdminManageSocmed::class, 'create']);
+    Route::post('/admin-manage-socmed', [AdminManageSocmed::class, 'store']);
+    Route::get('/admin-manage-socmed/edit/{id}', [AdminManageSocmed::class, 'edit']);
+    Route::get('/admin-manage-socmed-change/{id}', [AdminManageSocmed::class, 'changeActiveSocmed']);
+    Route::put('/admin-manage-socmed/update/{id}', [AdminManageSocmed::class, 'update']);
+    Route::delete("/admin-manage-socmed/{id}", [AdminManageSocmed::class, 'delete']);
+
+    Route::get('/admin-manage-contact', [AdminManageContact::class, 'index']);
+    Route::get('/admin-manage-contact/add', [AdminManageContact::class, 'create']);
+    Route::post('/admin-manage-contact', [AdminManageContact::class, 'store']);
+    Route::get('/admin-manage-contact/edit/{id}', [AdminManageContact::class, 'edit']);
+    Route::put('/admin-manage-contact/update/{id}', [AdminManageContact::class, 'update']);
+    Route::delete("/admin-manage-contact/{id}", [AdminManageContact::class, 'delete']);
 });
 
 Route::get('/admin-login', [loginController::class, 'index'])->name('admin-login');

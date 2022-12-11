@@ -73,20 +73,37 @@
 
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-backgroundImage') }}"
-                        aria-expanded="false">
-                        <i class="far fa-edit" aria-hidden="true"></i>
-                        <span class="hide-menu">Background Image di Beranda</span>
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="{{ url('/admin-backgroundImage') }}" aria-expanded="false">
+                        <i class="fas fa-images" aria-hidden="true"></i>
+                        <span class="hide-menu">Hero's Slider</span>
                     </a>
                 </li>
 
                 <li class="sidebar-item">
-                    <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-Manage-Feature') }}"
-                        aria-expanded="false">
-                        <i class="far fa-edit" aria-hidden="true"></i>
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="{{ url('/admin-Manage-Feature') }}" aria-expanded="false">
+                        <i class="fas fa-desktop" aria-hidden="true"></i>
                         <span class="hide-menu">Sistem Website</span>
                     </a>
                 </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="{{ url('/admin-manage-socmed') }}" aria-expanded="false">
+                        <i class="fas fa-share-alt" aria-hidden="true"></i>
+                        <span class="hide-menu">Sosial Media</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item">
+                    <a class="sidebar-link waves-effect waves-dark sidebar-link"
+                        href="{{ url('/admin-manage-contact') }}" aria-expanded="false">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <span class="hide-menu">Kontak</span>
+                    </a>
+                </li>
+
                 <li class="sidebar-item">
                     <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/admin-logut') }}"
                         aria-expanded="false" href="{{ url('/admin-logout') }}"

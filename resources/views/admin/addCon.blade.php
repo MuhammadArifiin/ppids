@@ -1,16 +1,16 @@
 @extends('layouts.adminApp')
-@section('title', 'Tambah Slider')
+@section('title', 'Tambah Kontak')
 @section('content')
 <div class="page-wrapper">
     <div class="page-breadcrumb bg-white">
         <div class="row align-items-center">
             <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <h4 class="page-title">Tambah Hero's Slider</h4>
+                <h4 class="page-title">Tambah Kontak</h4>
             </div>
             <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
                 <div class="d-md-flex">
                     <ol class="breadcrumb ms-auto">
-                        <li><a href="#" class="fw-normal">Tambah Hero's Slider</a></li>
+                        <li><a href="#" class="fw-normal">Tambah Kontak</a></li>
                     </ol>
                 </div>
             </div>
@@ -29,11 +29,19 @@
         <div class="row">
             <div class="col-md-12 col-lg-12 col-sm-12">
                 <div class="white-box">
-                    <form action="{{ url('/admin-backgroundImage') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ url('/admin-manage-contact') }}" method="POST">
                         @csrf
                         <div class="mb-3">
-                            <label for="image" class="form-label">Gambar</label>
-                            <input type="file" class="form-control" id="image" name="image">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Telepon</label>
+                            <input type="number" class="form-control" id="phone" name="phone">
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Alamat</label>
+                            <textarea name="address" id="address" class="form-control" cols="30" rows="10"></textarea>
                         </div>
 
                         <button type="submit" class="btn btn-info text-white">Submit</button>
@@ -43,14 +51,4 @@
         </div>
     </div>
 </div>
-@endsection
-
-@section('scripts')
-<script>
-    ClassicEditor
-            .create( document.querySelector( '#task-textarea' ) )
-            .catch( error => {
-                console.error( error );
-            } );
-</script>
 @endsection

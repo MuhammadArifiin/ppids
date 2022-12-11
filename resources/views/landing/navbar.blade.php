@@ -1,19 +1,10 @@
 <!-- TOP NAV -->
 <div class="top-nav" id="home">
     <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-auto">
-                <p> <i class='bx bxs-envelope'></i><a href="ppids@upr.ac.id" class="text-white">ppids@upr.ac.id</a></p>
-                {{-- <p> <i class='bx bxs-phone-call'></i>+62 81234567890</p> --}}
-            </div>
-            {{-- <div class="col-auto social-icons">
-                <a href="#"><i class='bx bxl-facebook'></i></a>
-                <a href="#"><i class='bx bxl-twitter'></i></a>
-                <a href="#"><i class='bx bxl-instagram'></i></a>
-                <a href="#"><i class='bx bxl-pinterest'></i></a>
-            </div> --}}
-        </div>
+        <marquee>Pusat Pengembangan Infrastruktur Informasi Data Spasial Universitas Palangka Raya</marquee>
     </div>
+
+</div>
 </div>
 
 <!-- BOTTOM NAV -->
@@ -35,24 +26,28 @@
                     <a class="nav-link" href="{{ url('about') }}">Tentang</a>
                 </li>
                 @endif
-                
 
                 @if ($manageDivision == 1)
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('divisions') }}">Pengelola</a>
+                </li>
                 @endif
-               
+
                 @if ($manageFacility == 1)
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
-                    </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('facilities') }}">Fasilitas</a>
+                </li>
                 @endif
-            
 
                 @if ($managePublication == 1)
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('publications') }}">Berita</a>
+                </li>
+                @endif
+
+                @if ($manageContact == 1)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('contact') }}">Kontak</a>
                 </li>
                 @endif
             </ul>

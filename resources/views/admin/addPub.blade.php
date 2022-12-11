@@ -61,13 +61,13 @@
 @section('scripts')
 <script>
     ClassicEditor
-            .create( document.querySelector( '#task-textarea' ) , {
-                ckfinder: {
-                uploadUrl: '{{route('image.upload').'?_token='.csrf_token()}}',
-                }
-            })
-            .catch( error => {
-                console.error( error );
-            } );
+    .create( document.querySelector( '#task-textarea' ) , {
+    ckfinder: {
+    uploadUrl: '{{route('image.upload').'?_token='.csrf_token()}}',
+    }
+    })
+    .catch( error => {
+    console.error( error );
+    } );
 </script>
 @endsection

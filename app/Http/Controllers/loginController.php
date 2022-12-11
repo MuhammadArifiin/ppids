@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\ManageFeature;
+use App\Models\Socmed;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -31,7 +32,15 @@ class loginController extends Controller
         foreach($manageFacility as $data){
             $manageFacility = $data->active;
         }
-        return view('layouts.login', compact('managePublication','manageAbout','manageDivision','manageFacility'));
+
+        $manageContact = ManageFeature::where('name_feature', 'facility')->get();
+        foreach ($manageContact as $data) {
+            $manageContact = $data->active;
+        }
+
+        $socmed = Socmed::get();
+
+        return view('layouts.login', compact('managePublication','manageAbout','manageDivision','manageFacility', 'manageContact', 'socmed'));
     }
 
     public function checkLogin(Request $request)

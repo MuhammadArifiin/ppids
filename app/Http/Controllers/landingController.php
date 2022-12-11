@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\about;
 use App\Models\backgroundImageInHome;
+use App\Models\Contact;
 use App\Models\ManageFeature;
 use App\Models\Publications;
+use App\Models\Socmed;
 
 class landingController extends Controller
 {
@@ -35,12 +37,20 @@ class landingController extends Controller
             $manageFacility = $data->active;
         }
 
+        $socmed = Socmed::get();
+
         $backgroundImage = backgroundImageInHome::get();
+
+        $manageContact = ManageFeature::where('name_feature', 'facility')->get();
+        foreach ($manageContact as $data) {
+            $manageContact = $data->active;
+        }
 
         return view('landing.home')->with([
             'publications' => $publications, 'mostViewed' => $mostViewed,
             'managePublication' => $managePublication, 'manageAbout' => $manageAbout, 'manageDivision' => $manageDivision,
-            'manageFacility' => $manageFacility, 'backgroundImage' => $backgroundImage
+            'manageFacility' => $manageFacility,
+            'socmed' => $socmed, 'backgroundImage' => $backgroundImage, 'manageContact' => $manageContact
         ]);
     }
 
@@ -67,6 +77,15 @@ class landingController extends Controller
         foreach ($manageFacility as $data) {
             $manageFacility = $data->active;
         }
-        return view('landing.about', compact('items', 'managePublication', 'manageAbout', 'manageDivision', 'manageFacility'));
+
+        $manageContact = ManageFeature::where('name_feature', 'facility')->get();
+        foreach ($manageContact as $data) {
+            $manageContact = $data->active;
+        }
+
+        $socmed = Socmed::get();
+
+
+        return view('landing.about', compact('items', 'managePublication', 'manageAbout', 'manageDivision', 'manageFacility', 'manageContact', 'socmed'));
     }
 }
