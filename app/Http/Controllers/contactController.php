@@ -38,6 +38,12 @@ class contactController extends Controller
 
         $socmed = Socmed::get();
 
+        $manageContact = ManageFeature::where('name_feature', 'facility')->get();
+        foreach ($manageContact as $data) {
+            $manageContact = $data->active;
+        }
+
+
         return view('landing.contact', compact('contact', 'managePublication', 'manageAbout', 'manageDivision', 'manageFacility', 'manageContact', 'socmed'));
     }
 }
